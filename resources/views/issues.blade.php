@@ -327,15 +327,16 @@
                     <thead class="thead-light">
                       <tr>
                         <th>User ID</th>
-                        <th>Status</th>
+                        <th>User Name</th>
+
                         <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td><a href="#">RA0449</a></td>
-                        <td><span class="badge badge-success">Delivered</span></td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td><a href="#">RA0449</a></td>
+                        <td><a href="#" class="btn btn-sm btn-primary">Details</a></td>
                       </tr>
                     </tbody>
                   </table>

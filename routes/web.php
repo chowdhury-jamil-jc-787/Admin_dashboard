@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\adminController;
+use App\Http\Controllers\logoutController;
+use App\Http\Controllers\issueController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +27,10 @@ Route::get('/issues', function () {
     return view('issues');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('admin');
+})->name('dashboard');
+
+Route::get('/logout', [logoutController::class,'index'])->name('logout');
+
+Route::get('issue',[issueController::class,'show']);

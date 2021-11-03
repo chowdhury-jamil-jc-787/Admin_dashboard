@@ -1,79 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
-<head>
+    <link rel="stylesheet" href="{{ URL::asset('/asset/css/fonts/icomoon/style.css') }}">
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link href="img/logo/logo.png" rel="icon">
-  <title>Admin - Login</title>
-  <link href="{{ URL::asset('/asset/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
-  <link href="{{ URL::asset('/asset/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
-  <link href="{{ URL::asset('/asset/css/ruang-admin.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ URL::asset('/asset/css/css/owl.carousel.min.css') }}">
 
-</head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ URL::asset('/asset/css/css/bootstrap.min.css') }}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{{ URL::asset('/asset/css/css/style.css') }}">
+    <link href="{{ URL::asset('/asset/img/logo/favicon.ico') }}" rel="icon">
+    <title>Admin-Login</title>
+  </head>
+  <body>
+  
 
-<body class="bg-gradient-login">
-  <!-- Login Content -->
-  <div class="container-login">
-    <div class="row justify-content-center">
-      <div class="col-xl-6 col-lg-12 col-md-9">
-        <div class="card shadow-sm my-5">
-          <div class="card-body p-0">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="login-form">
-                  <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Login</h1>
-                  </div>
-                  <form class="user">
-                    <div class="form-group">
-                      <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"
-                        placeholder="Enter Email Address">
-                    </div>
-                    <div class="form-group">
-                      <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                      <div class="custom-control custom-checkbox small" style="line-height: 1.5rem;">
-                        <input type="checkbox" class="custom-control-input" id="customCheck">
-                        <label class="custom-control-label" for="customCheck">Remember
-                          Me</label>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <a href="index.html" class="btn btn-primary btn-block">Login</a>
-                    </div>
-                    <hr>
-                    <a href="index.html" class="btn btn-google btn-block">
-                      <i class="fab fa-google fa-fw"></i> Login with Google
-                    </a>
-                    <a href="index.html" class="btn btn-facebook btn-block">
-                      <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                    </a>
-                  </form>
-                  <hr>
-                  <div class="text-center">
-                    <a class="font-weight-bold small" href="register.html">Create an Account!</a>
-                  </div>
-                  <div class="text-center">
-                  </div>
-                </div>
+  
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 order-md-2">
+          <img src="{{ URL::asset('/asset/css/images/undraw_file_sync_ot38.svg') }}" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="mb-4">
+              <h3>Sign In to <strong>Admin Dashboard</strong></h3>
+              <p class="mb-4">Skyflora Admin Login Page</p>
+            </div>
+            <form action="login" method="post">
+                @csrf
+              <div class="form-group first">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username">
+
               </div>
+              <div class="form-group last mb-4">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password">
+                
+              </div>
+              
+              <div class="d-flex mb-5 align-items-center">
+                <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label>
+               {{-- <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span> --}}
+              </div>
+
+              <input type="submit" value="Log In" class="btn text-white btn-block btn-primary">
+
+              <span class="d-block text-left my-4 text-muted"> or sign in with</span>
+              
+              <div class="social-login">
+                <a href="#" class="facebook">
+                  <span class="icon-facebook mr-3"></span> 
+                </a>
+                <a href="#" class="twitter">
+                  <span class="icon-twitter mr-3"></span> 
+                </a>
+                <a href="#" class="google">
+                  <span class="icon-google mr-3"></span> 
+                </a>
+              </div>
+            </form>
             </div>
           </div>
+          
         </div>
+        
       </div>
     </div>
   </div>
-  <!-- Login Content -->
-  <script src="{{ URL::asset('/asset/jquery/jquery.min.js') }}"></script>
-  <script src="{{ URL::asset('/asset/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ URL::asset('/asset/jquery-easing/jquery.easing.min.js') }}"></script>
-  <script src="{{ URL::asset('/asset/js/ruang-admin.min.js') }}"></script>
-</body>
 
+  
+    <script src="{{ URL::asset('/asset/css/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ URL::asset('/asset/css/js/popper.min.js') }}"></script>
+    <script src="{{ URL::asset('/asset/css/js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('/asset/css/js/main.js') }}"></script>
+  </body>
 </html>
