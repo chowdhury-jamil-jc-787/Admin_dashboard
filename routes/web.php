@@ -34,3 +34,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/logout', [logoutController::class,'index'])->name('logout');
 
 Route::get('issue',[issueController::class,'show']);
+
+
